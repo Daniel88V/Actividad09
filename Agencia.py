@@ -27,19 +27,17 @@ for i in range(cant):
             "lugares": destinos
         }
     }
+print("\t ---Listado de clientes---")
+for codigo, datos in clientes.items():
+    print(f"Codigo: {codigo}")
+    print(f"Nombre: {datos['nombre']}")
+    print(f"Destinos: {datos['destino']['lugares']}")
 
-print("¿Desea realizar alguna de las siguientes opciones?")
-print("1. Desplegar listado de clientes")
-print("2. Desplegar el total de destinos visitados")
-print("3. Desplegar el cliente con más destinos visitados")
-print("4. Salir")
-print("Seleccione una opción: ")
-opcion = input()
-if opcion == "1":
-    print("\t ---Listado de clientes---")
-    for codigo, datos in clientes.items():
-        print(f"Codigo: {codigo}")
-        print(f"Nombre: {datos['nombre']}")
-        print(f"Destinos: {datos['destino']['lugares']}")
-elif opcion == "2":
-    print("\t ---Cantidad de destinos visitados---")
+"""
+Aun sigo tratando de hacer el ciclo, despues debo de averiguar como pasarlo a recursiva
+print("\t ---Cantidad de destinos visitados---")
+for codigo, datos in clientes.items():
+    visita = datos['destino']['lugares']
+    numero = len(visita)
+    print(f"Los cantidad de destinso es {numero}")
+"""
